@@ -1,6 +1,7 @@
+
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
+import Providers from "./Providers";
 
 const jetBrains_Mono = JetBrains_Mono({
   weight: ["100", '200', '300', '400', '500', '600', '700', '800'],
@@ -19,10 +20,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${jetBrains_Mono.className}`}>
-        {/* Navbar section */}
-        <Navbar />
-        {children}
-        {/* Footer section */}
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );
