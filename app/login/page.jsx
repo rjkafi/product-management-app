@@ -9,24 +9,42 @@ export default function LoginPage() {
   const [email, setEmail] = useState("");
   const dispatch = useDispatch();
   const router = useRouter();
-  const { token, loading, error } = useSelector((state) => state.auth);
+  const { token, loading, error, user } = useSelector((state) => state.auth);
 
-  // If user already logged in, so  redirect
+  // Redirect if already user logged in
   useEffect(() => {
     if (token) router.push("/products");
-  }, [token]);
+  }, [token, router]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     const res = await dispatch(loginUser(email));
+
     if (res.meta.requestStatus === "fulfilled") {
+      // Save user info in localStorage
+      localStorage.setItem("email", email);
+      localStorage.setItem("photoURL", user?.photoURL || "");
+
+      // Redirect to products page
       router.push("/products");
     }
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <form onSubmit={handleSubmit} className="bg-white p-8 rounded-xl shadow-md w-80">
+    <div className="flex flex-col items-center justify-center py-20 space-y-6">
+      {/*  Marquee section */}
+      <div className="marquee rounded-2xl border border-none bg-blue-50 w-80 border-b border-blue-200 py-2">
+        <div className="marquee-content text-blue-600 font-semibold">
+          🚀 Please log in first to access all features of this application. 🚀 Please log in first to access all features of this application 🚀
+        </div>
+      </div>
+
+      {/*  Login Form */}
+      <form
+        onSubmit={handleSubmit}
+        className="bg-white p-8 border border-gray-300 rounded-xl shadow-md w-80"
+      >
         <h1 className="text-2xl font-bold mb-4 text-center">Login</h1>
         <input
           type="email"

@@ -21,7 +21,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${jetBrains_Mono.className}`}>
         <Providers>
-          {children}
+         <div className="px-2 md:px-4 md:py-20 lg:py-24 max-w-7xl mx-auto ">
+           {children}
+         </div>
         </Providers>
       </body>
     </html>
