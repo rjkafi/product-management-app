@@ -9,7 +9,11 @@ export default function Providers({ children }) {
   return (
     <Provider store={store}>
       {/* Navbar */}
-      <Navbar />
+      <header className='sticky top-0 z-10 left-0'>
+        <div className="bg-base-100 shadow-sm">
+          <Navbar />
+        </div>
+      </header>
       {children}
     </Provider>
   );
