@@ -61,7 +61,7 @@ The project fulfills the given assignment requirements:
 | Icons            | React Icons                      |
 
 ## Server Side(secure)
-  Api - https://api.bitechx.com/auth
+  Api - https://api.bitechx.com
 
 
 ## 🚀 Live Site  
