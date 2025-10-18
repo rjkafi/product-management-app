@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛍️ Product Management App
 
-## Getting Started
+A modern Product Management Web Application built with Next.js (App Router), React, Redux Toolkit, and Tailwind CSS.  
+This project was developed as part of a company assignment focusing on clean architecture, beautiful UI/UX, and full CRUD functionality for managing products.
+ 
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This app allows users to browse, search, create, edit, and delete products using a clean, responsive, and accessible interface.  
+It features authentication, JWT session handling, and Redux-based state management to ensure scalability and maintainability.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎯 Assignment Goals
 
-## Learn More
+The project fulfills the given assignment requirements:
 
-To learn more about Next.js, take a look at the following resources:
+- Authentication flow using JWT  
+- Product CRUD operations with real-time updates  
+- Client-side validation  
+- Responsive UI (Tailwind + DaisyUI)  
+- Deployment on Vercel  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✨ Features
 
-## Deploy on Vercel
+### 🔐 Authentication
+- Email-based login (`POST /auth`)  
+- JWT stored in Redux state  
+- Automatic token handling on API requests  
+- Secure logout functionality  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 📦 Product Management
+- View all products with pagination  
+- Search products in real time  
+- Create, Edit, and Delete products  
+- Inline validation (e.g., price > 0)  
+- Confirmation dialogs for delete actions  
+- Auto cache updates after CRUD operations  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 💅 UI/UX
+- Responsive layout (mobile, tablet, desktop)  
+- DaisyUI-based consistent theme  
+- Loading spinners & error states  
+- Modern and accessible design  
+
+
+## 🧩 Tech Stack
+
+| Category         | Technology                       |
+|-----------------|----------------------------------|
+| Framework        | Next.js 15 (App Router)          |
+| UI Library       | React 19                         |
+| Styling          | Tailwind CSS 4, DaisyUI          |
+| State Management | Redux Toolkit, React Redux       |
+| HTTP Client      | Axios                            |
+| Alerts & Modals  | SweetAlert2                      |
+| Icons            | React Icons                      |
+
+## Server Side(secure)
+  Api - https://api.bitechx.com/auth
+
+
+## 🚀 Live Site  
+🌐 [Product Management App Live](https://product-management-app-ashen.vercel.app/)  
+
+
